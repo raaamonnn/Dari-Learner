@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,9 +11,13 @@
 		EB9E585F24DF58CE006A9D49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E585E24DF58CE006A9D49 /* SceneDelegate.swift */; };
 		EB9E586224DF58CE006A9D49 /* Dari_Learner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB9E586024DF58CE006A9D49 /* Dari_Learner.xcdatamodeld */; };
 		EB9E586424DF58CE006A9D49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E586324DF58CE006A9D49 /* ContentView.swift */; };
-		EB9E586624DF58D1006A9D49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9E586524DF58D1006A9D49 /* Assets.xcassets */; };
 		EB9E586924DF58D1006A9D49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9E586824DF58D1006A9D49 /* Preview Assets.xcassets */; };
 		EB9E586C24DF58D1006A9D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9E586A24DF58D1006A9D49 /* LaunchScreen.storyboard */; };
+		EB9E587424DF5FC3006A9D49 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E587324DF5FC3006A9D49 /* SplashScreen.swift */; };
+		EB9E587624DF8894006A9D49 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E587524DF8894006A9D49 /* MainScreenView.swift */; };
+		EBB016C624E248E800878E9B /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB016C524E248E800878E9B /* LearnView.swift */; };
+		EBB016C824E24BAF00878E9B /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB016C724E24BAF00878E9B /* LearnViewModel.swift */; };
+		EBE15ABD24E0F9EB00E7238A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE15ABC24E0F9EB00E7238A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +26,14 @@
 		EB9E585E24DF58CE006A9D49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EB9E586124DF58CE006A9D49 /* Dari_Learner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dari_Learner.xcdatamodel; sourceTree = "<group>"; };
 		EB9E586324DF58CE006A9D49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EB9E586524DF58D1006A9D49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB9E586824DF58D1006A9D49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB9E586B24DF58D1006A9D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB9E586D24DF58D1006A9D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB9E587324DF5FC3006A9D49 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		EB9E587524DF8894006A9D49 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		EBB016C524E248E800878E9B /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
+		EBB016C724E24BAF00878E9B /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
+		EBE15ABC24E0F9EB00E7238A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +69,15 @@
 				EB9E585C24DF58CE006A9D49 /* AppDelegate.swift */,
 				EB9E585E24DF58CE006A9D49 /* SceneDelegate.swift */,
 				EB9E586324DF58CE006A9D49 /* ContentView.swift */,
-				EB9E586524DF58D1006A9D49 /* Assets.xcassets */,
+				EB9E587524DF8894006A9D49 /* MainScreenView.swift */,
+				EBB016C524E248E800878E9B /* LearnView.swift */,
+				EBB016C724E24BAF00878E9B /* LearnViewModel.swift */,
+				EB9E587324DF5FC3006A9D49 /* SplashScreen.swift */,
 				EB9E586A24DF58D1006A9D49 /* LaunchScreen.storyboard */,
 				EB9E586D24DF58D1006A9D49 /* Info.plist */,
 				EB9E586024DF58CE006A9D49 /* Dari_Learner.xcdatamodeld */,
 				EB9E586724DF58D1006A9D49 /* Preview Content */,
+				EBE15ABC24E0F9EB00E7238A /* Assets.xcassets */,
 			);
 			path = "Dari Learner";
 			sourceTree = "<group>";
@@ -114,7 +126,7 @@
 				};
 			};
 			buildConfigurationList = EB9E585424DF58CE006A9D49 /* Build configuration list for PBXProject "Dari Learner" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.4";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -137,8 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9E586C24DF58D1006A9D49 /* LaunchScreen.storyboard in Resources */,
+				EBE15ABD24E0F9EB00E7238A /* Assets.xcassets in Resources */,
 				EB9E586924DF58D1006A9D49 /* Preview Assets.xcassets in Resources */,
-				EB9E586624DF58D1006A9D49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB9E587424DF5FC3006A9D49 /* SplashScreen.swift in Sources */,
+				EBB016C624E248E800878E9B /* LearnView.swift in Sources */,
+				EB9E587624DF8894006A9D49 /* MainScreenView.swift in Sources */,
 				EB9E585D24DF58CE006A9D49 /* AppDelegate.swift in Sources */,
 				EB9E586224DF58CE006A9D49 /* Dari_Learner.xcdatamodeld in Sources */,
+				EBB016C824E24BAF00878E9B /* LearnViewModel.swift in Sources */,
 				EB9E586424DF58CE006A9D49 /* ContentView.swift in Sources */,
 				EB9E585F24DF58CE006A9D49 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,7 +303,6 @@
 		EB9E587124DF58D1006A9D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Dari Learner/Preview Content\"";
 				DEVELOPMENT_TEAM = 2MXG9CA59K;
@@ -307,7 +322,6 @@
 		EB9E587224DF58D1006A9D49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Dari Learner/Preview Content\"";
 				DEVELOPMENT_TEAM = 2MXG9CA59K;

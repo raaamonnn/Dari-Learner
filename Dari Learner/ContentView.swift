@@ -9,8 +9,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showSplash = true
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        
+        
+        ZStack{
+            MainScreenView()
+            SplashScreen()
+                .opacity(showSplash ? 1 : 0)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        withAnimation() {
+                            self.showSplash = false
+                            
+                        }
+                        
+                        
+                    }
+            }
+            
+        }
+        
+        
+        
     }
 }
 
