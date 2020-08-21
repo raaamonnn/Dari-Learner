@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DariLearnerMainScreen.swift
 //  Dari Learner
 //
 //  Created by Ramon Amini on 8/8/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DariLearnerMainScreen: View {
     @State var showSplash = true
     
     
@@ -20,7 +20,7 @@ struct ContentView: View {
             SplashScreen()
                 .opacity(showSplash ? 1 : 0)
                 .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         withAnimation() {
                             self.showSplash = false
                             
@@ -39,6 +39,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        DariLearnerMainScreen()
     }
 }

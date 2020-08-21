@@ -38,24 +38,26 @@ struct MainScreenView: View {
                             
                             Spacer()
                             
-                            Button(action: {
-                                print("Button action")
-                            }) {
-                                
-                                
-                                NavigationLink(destination: LearnView()) {
-                                    Text("Start Learning\nDari")
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(Color.white)
-                                        .font(.largeTitle)
-                                        .padding(80)
-                                        .background(Color.black.opacity(0.1))
-                                        .clipShape(Circle())
-                                        .transition(.opacity)
+                            VStack{
+                                Button(action: {
+                                    print("Button action")
+                                }) {
+                                    
+                                    
+                                    NavigationLink(destination: LearnView()) {
+                                        Text("Start Learning\nDari")
+                                            .multilineTextAlignment(.center)
+                                            .foregroundColor(Color.white)
+                                            .font(.largeTitle)
+                                            .padding(80)
+                                            .background(Color.black.opacity(0.1))
+                                            .clipShape(Circle())
+                                            .transition(.opacity)
+                                    }
                                 }
-                                
                             }
-                            Spacer()
+
+                            Spacer(minLength: 350)
                     }
                     
                 }

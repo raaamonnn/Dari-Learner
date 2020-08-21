@@ -7,32 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB45276724E8D38E00FF356E /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB45276624E8D38E00FF356E /* LearnViewModel.swift */; };
+		EB45276C24E8F4B900FF356E /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB45276B24E8F4B900FF356E /* Words.swift */; };
 		EB9E585D24DF58CE006A9D49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E585C24DF58CE006A9D49 /* AppDelegate.swift */; };
 		EB9E585F24DF58CE006A9D49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E585E24DF58CE006A9D49 /* SceneDelegate.swift */; };
 		EB9E586224DF58CE006A9D49 /* Dari_Learner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB9E586024DF58CE006A9D49 /* Dari_Learner.xcdatamodeld */; };
-		EB9E586424DF58CE006A9D49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E586324DF58CE006A9D49 /* ContentView.swift */; };
+		EB9E586424DF58CE006A9D49 /* DariLearnerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E586324DF58CE006A9D49 /* DariLearnerMainScreen.swift */; };
 		EB9E586924DF58D1006A9D49 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9E586824DF58D1006A9D49 /* Preview Assets.xcassets */; };
 		EB9E586C24DF58D1006A9D49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9E586A24DF58D1006A9D49 /* LaunchScreen.storyboard */; };
 		EB9E587424DF5FC3006A9D49 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E587324DF5FC3006A9D49 /* SplashScreen.swift */; };
 		EB9E587624DF8894006A9D49 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9E587524DF8894006A9D49 /* MainScreenView.swift */; };
+		EBA51C0024EF34CD00C584B4 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA51BFF24EF34CD00C584B4 /* Grid.swift */; };
+		EBA51C0324EF350D00C584B4 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA51C0224EF350D00C584B4 /* GridLayout.swift */; };
 		EBB016C624E248E800878E9B /* LearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB016C524E248E800878E9B /* LearnView.swift */; };
-		EBB016C824E24BAF00878E9B /* LearnViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB016C724E24BAF00878E9B /* LearnViewModel.swift */; };
+		EBB016C824E24BAF00878E9B /* LearnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB016C724E24BAF00878E9B /* LearnModel.swift */; };
 		EBE15ABD24E0F9EB00E7238A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE15ABC24E0F9EB00E7238A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB45276624E8D38E00FF356E /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
+		EB45276B24E8F4B900FF356E /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		EB9E585924DF58CE006A9D49 /* Dari Learner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dari Learner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9E585C24DF58CE006A9D49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB9E585E24DF58CE006A9D49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EB9E586124DF58CE006A9D49 /* Dari_Learner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dari_Learner.xcdatamodel; sourceTree = "<group>"; };
-		EB9E586324DF58CE006A9D49 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EB9E586324DF58CE006A9D49 /* DariLearnerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DariLearnerMainScreen.swift; sourceTree = "<group>"; };
 		EB9E586824DF58D1006A9D49 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB9E586B24DF58D1006A9D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB9E586D24DF58D1006A9D49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB9E587324DF5FC3006A9D49 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		EB9E587524DF8894006A9D49 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		EBA51BFF24EF34CD00C584B4 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		EBA51C0224EF350D00C584B4 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		EBB016C524E248E800878E9B /* LearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnView.swift; sourceTree = "<group>"; };
-		EBB016C724E24BAF00878E9B /* LearnViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewModel.swift; sourceTree = "<group>"; };
+		EBB016C724E24BAF00878E9B /* LearnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnModel.swift; sourceTree = "<group>"; };
 		EBE15ABC24E0F9EB00E7238A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,6 +55,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB45276824E8D39900FF356E /* LearnView */ = {
+			isa = PBXGroup;
+			children = (
+				EBA51C0124EF34D600C584B4 /* QuizGrid */,
+				EB45276624E8D38E00FF356E /* LearnViewModel.swift */,
+				EBB016C724E24BAF00878E9B /* LearnModel.swift */,
+				EBB016C524E248E800878E9B /* LearnView.swift */,
+				EB45276B24E8F4B900FF356E /* Words.swift */,
+			);
+			path = LearnView;
+			sourceTree = "<group>";
+		};
+		EB45276924E8ECE700FF356E /* MainScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E587524DF8894006A9D49 /* MainScreenView.swift */,
+				EB9E587324DF5FC3006A9D49 /* SplashScreen.swift */,
+				EB9E586324DF58CE006A9D49 /* DariLearnerMainScreen.swift */,
+			);
+			path = MainScreenView;
+			sourceTree = "<group>";
+		};
+		EB45276A24E8ED0400FF356E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				EB9E585E24DF58CE006A9D49 /* SceneDelegate.swift */,
+				EB9E586A24DF58D1006A9D49 /* LaunchScreen.storyboard */,
+				EB9E585C24DF58CE006A9D49 /* AppDelegate.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		EB9E585024DF58CE006A9D49 = {
 			isa = PBXGroup;
 			children = (
@@ -66,14 +106,9 @@
 		EB9E585B24DF58CE006A9D49 /* Dari Learner */ = {
 			isa = PBXGroup;
 			children = (
-				EB9E585C24DF58CE006A9D49 /* AppDelegate.swift */,
-				EB9E585E24DF58CE006A9D49 /* SceneDelegate.swift */,
-				EB9E586324DF58CE006A9D49 /* ContentView.swift */,
-				EB9E587524DF8894006A9D49 /* MainScreenView.swift */,
-				EBB016C524E248E800878E9B /* LearnView.swift */,
-				EBB016C724E24BAF00878E9B /* LearnViewModel.swift */,
-				EB9E587324DF5FC3006A9D49 /* SplashScreen.swift */,
-				EB9E586A24DF58D1006A9D49 /* LaunchScreen.storyboard */,
+				EB45276924E8ECE700FF356E /* MainScreenView */,
+				EB45276824E8D39900FF356E /* LearnView */,
+				EB45276A24E8ED0400FF356E /* Misc */,
 				EB9E586D24DF58D1006A9D49 /* Info.plist */,
 				EB9E586024DF58CE006A9D49 /* Dari_Learner.xcdatamodeld */,
 				EB9E586724DF58D1006A9D49 /* Preview Content */,
@@ -88,6 +123,15 @@
 				EB9E586824DF58D1006A9D49 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBA51C0124EF34D600C584B4 /* QuizGrid */ = {
+			isa = PBXGroup;
+			children = (
+				EBA51BFF24EF34CD00C584B4 /* Grid.swift */,
+				EBA51C0224EF350D00C584B4 /* GridLayout.swift */,
+			);
+			path = QuizGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +207,15 @@
 			files = (
 				EB9E587424DF5FC3006A9D49 /* SplashScreen.swift in Sources */,
 				EBB016C624E248E800878E9B /* LearnView.swift in Sources */,
+				EB45276724E8D38E00FF356E /* LearnViewModel.swift in Sources */,
+				EBA51C0324EF350D00C584B4 /* GridLayout.swift in Sources */,
 				EB9E587624DF8894006A9D49 /* MainScreenView.swift in Sources */,
+				EBA51C0024EF34CD00C584B4 /* Grid.swift in Sources */,
 				EB9E585D24DF58CE006A9D49 /* AppDelegate.swift in Sources */,
 				EB9E586224DF58CE006A9D49 /* Dari_Learner.xcdatamodeld in Sources */,
-				EBB016C824E24BAF00878E9B /* LearnViewModel.swift in Sources */,
-				EB9E586424DF58CE006A9D49 /* ContentView.swift in Sources */,
+				EBB016C824E24BAF00878E9B /* LearnModel.swift in Sources */,
+				EB45276C24E8F4B900FF356E /* Words.swift in Sources */,
+				EB9E586424DF58CE006A9D49 /* DariLearnerMainScreen.swift in Sources */,
 				EB9E585F24DF58CE006A9D49 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
