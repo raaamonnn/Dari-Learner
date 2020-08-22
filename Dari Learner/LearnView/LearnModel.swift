@@ -10,8 +10,9 @@ import Foundation
 
 class LearnModel{
     var answers:[Answer] = []
+    var actualAnswer:Answer
     
-//    init() //grab all data from API
+    //    init() //grab all data from API
     init() {
         var id:Int = 0
         for word in Words.words{
@@ -19,20 +20,24 @@ class LearnModel{
             id+=1
         }
         answers[0].isAnswer = true
+        self.actualAnswer = answers[0]
     }
     
-    func chooseAnswer(answer: Answer) {
+    func chooseAnswer(answer: Answer) -> Bool{
         print("answer chosen: \(answer)")
         
         //if choose right answer do this
-        if answer.isChosen && answer.isAnswer{
+        if answer.isAnswer{
             print("Chosen and right")
+            return true
         }
-        else if answer.isChosen && !answer.isAnswer{
+        else if !answer.isAnswer{
             print("Chosen but wrong")
+            return false
         }
         else{
             print("WTF HAPPENED")
+            return false
         }
     }
     
@@ -42,6 +47,6 @@ class LearnModel{
         var isAnswer: Bool
         var word: Word
     }
-
+    
 }
 

@@ -9,38 +9,45 @@
 import SwiftUI
 
 struct MainScreenView: View {
+    @State var dynamicCircleSize: CGFloat = 100
     var body: some View {
         
         NavigationView
             {
                 
-                ZStack(alignment: .top){
+                ZStack{
                     Background
                     
                     VStack
                         {
                             Header
                             
-                            
                             Spacer() //center button 1
                             
-                                Button(action: {
-                                    print("Button action")
-                                }) {
-                                    
-                                    
-                                    NavigationLink(destination: LearnView()) {
+                            Button(action: {
+                                print("Button action")
+                            }) {
+                                
+                                
+                                NavigationLink(destination: LearnView()) {
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 200)
+                                            .fill(Color.black)
+                                            .shadow(color: Color.black, radius: 20, y: 5)
+                                            .opacity(0.2)
+                                            .aspectRatio(contentMode: .fit)
+                                            .padding(50)
                                         Text("Start Learning\nDari")
                                             .multilineTextAlignment(.center)
                                             .foregroundColor(Color.white)
                                             .font(.largeTitle)
-                                            .padding(80)
-                                            .background(Color.black.opacity(0.1))
-                                            .clipShape(Circle())
-                                            .transition(.opacity)
+                                        
+                                        
                                     }
-                                }.padding(.bottom, 50) //to even out spacing for header
-
+                                        .transition(.opacity)
+                                }
+                            }.padding(.bottom, 50) //to even out spacing for header
+                            
                             Spacer()//center button 2
                     }.edgesIgnoringSafeArea([.top,.bottom])
                     
@@ -57,15 +64,15 @@ struct MainScreenView: View {
     
     var Background: some View {
         Image("Background")
-        .resizable()
-        .edgesIgnoringSafeArea([.top,.bottom])
+            .resizable()
+            .edgesIgnoringSafeArea([.top,.bottom])
     }
     
     var Header: some View {
         HStack{
             Spacer()
             
-                Text("Dari Learner")
+            Text("Dari Learner")
                 .padding(.leading)
                 .font(.largeTitle)
                 .foregroundColor(Color.white)

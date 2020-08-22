@@ -12,61 +12,64 @@ struct LearnView: View {
     @ObservedObject var viewModel:LearnViewModel = LearnViewModel()
     
     var body: some View {
-        ZStack(alignment: .top){
+        ZStack{
             Image("Background")
                 .resizable()
-                .edgesIgnoringSafeArea([.top])
+                .edgesIgnoringSafeArea([.top, .bottom])
             
-
+            
             
             VStack{
                 Text("Dari Learner")
                     .font(.largeTitle)
                     .foregroundColor(Color.white)
-
-                RoundedRectangle(cornerRadius: 20)
-                .fill(Color.black)
-                    .padding()
+                    .padding(.top, 50)
+                
+                
+                ZStack{
+                    answerBubble
+                    Text(viewModel.getActualAnswer().word.DariWord)
+                        .foregroundColor(Color.white)
+                        .font(.system(size: 30, weight: .heavy, design: .default))
+                }
+                
+                
                 Grid(viewModel.answers) { answer in
                     
                     quizView(answer: answer).onTapGesture {
-                        self.viewModel.chooseAnswer(answer: answer)
-                    }
-                    .padding()
+                        if self.viewModel.chooseAnswer(answer: answer){
+                        }
+                        
+                    }.transition(.opacity)
                 }
             }
-
-            
+            .edgesIgnoringSafeArea([.top])
         }
     }
 }
+
 struct quizView: View {
     var answer: LearnModel.Answer
     
     var body: some View{
         GeometryReader { geometry in
-            
-
-                if self.answer.isAnswer{
-                    RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.black)
-
-                    Text(self.answer.word.DariWord)
+            ZStack{
+                answerBubble
+                Text(self.answer.word.EnglishWord)
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color.white)
-                }
-                 
-                
-                ZStack{
-                    RoundedRectangle(cornerRadius: 20)
-                        .fill(Color.black)
-                    
-                    Text(self.answer.word.EnglishWord)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color.white)
-                }
-           
-
+            }
         }
     }
+}
+
+
+
+var answerBubble: some View {
+    RoundedRectangle(cornerRadius: 20)
+        .fill(Color.black)
+        .shadow(color: Color.black, radius: 20, y: 5)
+        .opacity(0.2)
+        .padding()
+    
 }

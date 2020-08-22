@@ -17,8 +17,12 @@ class LearnViewModel: ObservableObject{
     }
     
     // MARK: - Intent(s)
-    func chooseAnswer(answer: LearnModel.Answer){
-        learnModel.chooseAnswer(answer: answer)
+    func chooseAnswer(answer: LearnModel.Answer) -> Bool {
+        return learnModel.chooseAnswer(answer: answer)
+    }
+    
+    func getActualAnswer() -> LearnModel.Answer{
+        return learnModel.actualAnswer
     }
     
 }

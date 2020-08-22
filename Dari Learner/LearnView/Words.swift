@@ -10,7 +10,7 @@ import Foundation
 
 class Words{
     static var words:[Word] = [Word(id: 0, EnglishWord: "Hello", DariWord: "Salaam"),Word(id: 1, EnglishWord: "Bread", DariWord: "Naan"),Word(id: 2, EnglishWord: "Thank You", DariWord: "Tashakor"),Word(id: 3, EnglishWord: "Yes", DariWord: "Baleh")]
-
+    
 }
 
 struct Word: Codable, Identifiable{
