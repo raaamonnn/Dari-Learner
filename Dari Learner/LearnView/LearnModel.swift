@@ -18,6 +18,7 @@ class LearnModel{
             answers.append(Answer(id: id, isChosen: false, isAnswer: false, word: word))
             id+=1
         }
+        answers[0].isAnswer = true
     }
     
     func chooseAnswer(answer: Answer) {

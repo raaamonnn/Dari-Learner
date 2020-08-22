@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+//fix Dari Learner Title and get the actual question to appear
 struct LearnView: View {
     @ObservedObject var viewModel:LearnViewModel = LearnViewModel()
     
@@ -15,10 +15,27 @@ struct LearnView: View {
         ZStack(alignment: .top){
             Image("Background")
                 .resizable()
-                .edgesIgnoringSafeArea([.top,.bottom])
+                .edgesIgnoringSafeArea([.top])
             
-//            Grid(viewModel) ????
-            // TODO: wut
+
+            
+            VStack{
+                Text("Dari Learner")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.white)
+
+                RoundedRectangle(cornerRadius: 20)
+                .fill(Color.black)
+                    .padding()
+                Grid(viewModel.answers) { answer in
+                    
+                    quizView(answer: answer).onTapGesture {
+                        self.viewModel.chooseAnswer(answer: answer)
+                    }
+                    .padding()
+                }
+            }
+
             
         }
     }
@@ -28,10 +45,28 @@ struct quizView: View {
     
     var body: some View{
         GeometryReader { geometry in
-            ZStack{
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.white)
-            }
+            
+
+                if self.answer.isAnswer{
+                    RoundedRectangle(cornerRadius: 20)
+                    .fill(Color.black)
+
+                    Text(self.answer.word.DariWord)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color.white)
+                }
+                 
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.black)
+                    
+                    Text(self.answer.word.EnglishWord)
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color.white)
+                }
+           
+
         }
     }
 }
