@@ -9,18 +9,29 @@
 import Foundation
 
 class LearnModel{
+
     var answers:[Answer] = []
     var actualAnswer:Answer
     
-    //    init() //grab all data from API
     init() {
-        var id:Int = 0
-        for word in Words.words{
-            answers.append(Answer(id: id, isChosen: false, isAnswer: false, word: word))
-            id+=1
+        var randomIds:[Int] = []
+        
+        for _ in 1 ... 4 {
+            
+            // - to make sure there aren't duplicates -
+            var wordId:Int = Int.random(in: 0..<Words.words.count)
+            while randomIds.contains(wordId){
+                wordId = Int.random(in: 0..<Words.words.count)
+            }
+            randomIds.append(wordId)
+            
+            answers.append(Answer(id: wordId, isChosen: false, isAnswer: false, word: Words.words.first(where: {$0.id == wordId})!))
         }
-        answers[0].isAnswer = true
-        self.actualAnswer = answers[0]
+        
+        // - chooses which vocab to make the question -
+        let randomAnswer = Int.random(in: 0..<4)
+        answers[randomAnswer].isAnswer = true
+        self.actualAnswer = answers[randomAnswer]
     }
     
     func chooseAnswer(answer: Answer) -> Bool{
@@ -41,7 +52,19 @@ class LearnModel{
         }
     }
     
-    struct Answer: Identifiable {
+    func nextQuiz(){
+        
+    }
+    
+    struct Answer: Identifiable, Comparable {
+        static func < (lhs: LearnModel.Answer, rhs: LearnModel.Answer) -> Bool {
+            return lhs.word.EnglishWord < rhs.word.EnglishWord
+        }
+        
+        static func == (lhs: LearnModel.Answer, rhs: LearnModel.Answer) -> Bool {
+            return lhs.word.EnglishWord == rhs.word.EnglishWord
+        }
+        
         var id: Int
         var isChosen: Bool
         var isAnswer: Bool
