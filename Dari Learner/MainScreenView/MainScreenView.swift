@@ -34,7 +34,7 @@ struct MainScreenView: View {
                                         RoundedRectangle(cornerRadius: 200)
                                             .fill(Color.black)
                                             .shadow(color: Color.black, radius: 20, y: 5)
-                                            .opacity(0.2)
+                                            .opacity(0.5)
                                             .aspectRatio(contentMode: .fit)
                                             .padding(50)
                                         Text("Start Learning\nDari")
@@ -73,7 +73,7 @@ struct MainScreenView: View {
             Spacer()
             
             Text("Dari Learner")
-                .padding(.leading)
+                .padding(.leading, 40)
                 .font(.largeTitle)
                 .foregroundColor(Color.white)
             

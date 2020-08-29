@@ -17,7 +17,7 @@ struct LearnView: View {
     @State private var disabled = false
     
     init(){
-        self.allAnswers.append(contentsOf: self.viewModel.answers)
+        self.allAnswers = viewModel.answers //why is this empty
     }
     func colorFor(answer: LearnModel.Answer, correctAnswer: LearnModel.Answer) -> Color {
 
@@ -39,14 +39,36 @@ struct LearnView: View {
                 .edgesIgnoringSafeArea([.top, .bottom])
             
             VStack{
-                Text("Dari Learner")
+                HStack{
+                    Text("Dari Learner")
                     .font(.largeTitle)
                     .foregroundColor(Color.white)
                     .padding(.top, 50)
+                    .padding(.leading, 90)
                 
+                
+                Button(action: {
+                    print("Button Tapped")
+                    self.viewModel.createQuiz()
+                }) {
+                            Text("Next")
+                                .foregroundColor(Color.white)
+                                .font(.callout)
+                                .padding(10)
+                                .padding([.trailing,.leading], 10)
+                                .background(Color.green.opacity(0.5))
+                                .cornerRadius(25)
+                                .padding(.top, 50)
+                                .padding(.trailing, 10)
+                                .opacity(self.dim ? 1 : 0)
+                            
+                }
+                .transition(.scale)
+                    .animation(.easeInOut(duration: 1.5))// !disabled because this is also used for the answerbubbles
+                }
                 
                 ZStack{
-                    AnswerBubble(fillColor: Color.black)
+                    AnswerBubble(fillColor: Color.black, isChosen: false)
                     Text(viewModel.getActualAnswer().word.DariWord)
                         .foregroundColor(Color.white)
                         .font(.system(size: 30, weight: .heavy, design: .default))
@@ -55,39 +77,36 @@ struct LearnView: View {
                 
                 Grid(viewModel.answers) { answer in
                     
-                    //how can i change the ui of quizView(answer) that is being tapped inside the closure
                     QuizView(answer: answer,
-                             fillColor: self.colorFor(answer: answer, correctAnswer: self.viewModel.getActualAnswer())).onTapGesture {
-
+                        fillColor: self.colorFor(answer: answer, correctAnswer: self.viewModel.getActualAnswer())).onTapGesture {
+                
                         self.tappedAnswers.append(answer)
                             
                         if self.viewModel.chooseAnswer(answer: answer){
-                            //self.dim.toggle()
+                            self.dim.toggle()
                             self.disabled.toggle()
-                            print("a")
                         }
                     }
-                    //.opacity(self.dim ? 0.4 : 1.0)
                     .animation(.easeInOut(duration: 1.0))
                     .disabled(self.disabled)
                 }
             }
             .edgesIgnoringSafeArea([.top])
+        }.onDisappear{
+            self.viewModel.createQuiz()
         }
     }
 }
 
 struct QuizView: View {
-    var answer: LearnModel.Answer
-    var fillColor: Color
+    let answer: LearnModel.Answer
+    let fillColor: Color
     
     var body: some View{
-        
-
         GeometryReader { geometry in
             ZStack{
     
-                AnswerBubble(fillColor: self.fillColor)
+                AnswerBubble(fillColor: self.fillColor, isChosen: (self.answer.isChosen ? true : false))
                 
                 Text(self.answer.word.EnglishWord)
                     .multilineTextAlignment(.center)
@@ -99,14 +118,14 @@ struct QuizView: View {
 
 struct AnswerBubble: View {
     let fillColor: Color
+    let isChosen: Bool
     
     var body: some View{
         RoundedRectangle(cornerRadius: 20)
             .fill(fillColor)
             .shadow(color: Color.black, radius: 20, y: 5)
-            .opacity(0.2)
+            .opacity(0.5)
             .padding()
-    }
+            .scaleEffect(isChosen ? 1.1 : 1)
+    }// add 1.0 opacity
 }
-
-

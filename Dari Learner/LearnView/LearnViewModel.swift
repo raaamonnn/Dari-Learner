@@ -22,7 +22,11 @@ class LearnViewModel: ObservableObject{
     }
     
     func getActualAnswer() -> LearnModel.Answer{
-        return learnModel.actualAnswer
+        return learnModel.getActualAnswer()
+    }
+    
+    func createQuiz(){
+        learnModel = LearnModel()
     }
     
 }
