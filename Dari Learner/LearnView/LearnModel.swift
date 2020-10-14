@@ -19,12 +19,14 @@ class LearnModel{
         for _ in 1 ... 4 {
             
             // - to make sure there aren't duplicates -
+//            let wordsGenerated:Words = Words()
+//            print(wordsGenerated.words)
             var wordId:Int = Int.random(in: 0..<Words.words.count)
             while randomIds.contains(wordId){
                 wordId = Int.random(in: 0..<Words.words.count)
             }
             randomIds.append(wordId)
-            
+
             answers.append(Answer(id: wordId, isChosen: false, isAnswer: false, word: Words.words.first(where: {$0.id == wordId})!))
         }
         
@@ -60,34 +62,34 @@ class LearnModel{
         }
     }
     
-//    func nextQuiz(){
-//        var randomIds:[Int] = []
-//        
-//        for _ in 1 ... 4 {
-//            
-//            // - to make sure there aren't duplicates -
-//            var wordId:Int = Int.random(in: 0..<Words.words.count)
-//            while randomIds.contains(wordId){
-//                wordId = Int.random(in: 0..<Words.words.count)
-//            }
-//            randomIds.append(wordId)
-//            
-//            answers.append(Answer(id: wordId, isChosen: false, isAnswer: false, word: Words.words.first(where: {$0.id == wordId})!))
-//        }
-//        
-//        // - chooses which vocab to make the question -
-//        let randomAnswer = Int.random(in: 0..<4)
-//        answers[randomAnswer].isAnswer = true
-//        actualAnswer = randomAnswer
-//    }
+    func nextQuiz(){
+        var randomIds:[Int] = []
+        answers.removeAll()
+        
+        for _ in 1 ... 4 {
+            
+            // - to make sure there aren't duplicates -
+            var wordId:Int = Int.random(in: 0..<Words.words.count)
+            while randomIds.contains(wordId){
+                wordId = Int.random(in: 0..<Words.words.count)
+            }
+            randomIds.append(wordId)
+            answers.append(Answer(id: wordId, isChosen: false, isAnswer: false, word: Words.words.first(where: {$0.id == wordId})!))
+        }
+        
+        // - chooses which vocab to make the question -
+        let randomAnswer = Int.random(in: 0..<4)
+        answers[randomAnswer].isAnswer = true
+        actualAnswer = randomAnswer
+    }
     
     struct Answer: Identifiable, Comparable{
         static func < (lhs: LearnModel.Answer, rhs: LearnModel.Answer) -> Bool {
-            return lhs.word.EnglishWord < rhs.word.EnglishWord
+            return lhs.word.EnglishWord < rhs.word.EnglishWord && lhs.word.DariWord < rhs.word.DariWord
         }
         
         static func == (lhs: LearnModel.Answer, rhs: LearnModel.Answer) -> Bool {
-            return lhs.word.EnglishWord == rhs.word.EnglishWord
+            return lhs.word.EnglishWord == rhs.word.EnglishWord && lhs.word.DariWord == rhs.word.DariWord
         }
         
         var id: Int

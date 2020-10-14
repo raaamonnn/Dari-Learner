@@ -48,7 +48,8 @@ struct LearnView: View {
                 
                 
                 Button(action: {
-                    print("Button Tapped")
+                    self.dim.toggle()
+                    self.disabled.toggle()
                     self.viewModel.createQuiz()
                 }) {
                             Text("Next")
@@ -65,7 +66,8 @@ struct LearnView: View {
                 }
                 .transition(.scale)
                     .animation(.easeInOut(duration: 1.5))// !disabled because this is also used for the answerbubbles
-                }
+                }.navigationBarTitle("")
+                .navigationBarHidden(true)
                 
                 ZStack{
                     AnswerBubble(fillColor: Color.black, isChosen: false)
